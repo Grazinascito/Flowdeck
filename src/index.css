@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  --color-surface: oklch(0.985 0.002 247);
+  --color-surface-elevated: oklch(1 0 0);
+  --color-border: oklch(0.91 0.006 247);
+  --color-muted: oklch(0.55 0.02 247);
+  --color-foreground: oklch(0.2 0.02 247);
+  --color-accent: oklch(0.45 0.15 264);
+}
+
+.dark {
+  --color-surface: oklch(0.17 0.015 264);
+  --color-surface-elevated: oklch(0.22 0.02 264);
+  --color-border: oklch(0.32 0.02 264);
+  --color-muted: oklch(0.62 0.02 264);
+  --color-foreground: oklch(0.93 0.01 264);
+  --color-accent: oklch(0.72 0.12 264);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: var(--color-surface);
+  color: var(--color-foreground);
+}
